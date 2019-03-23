@@ -174,5 +174,16 @@ i {
 #dice-2{
     top: 250px;
 }
-
+.oneDice{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 288px;
+    transform: translateX(-50%);
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    
+}
 #input-num:focus{outline: none;}

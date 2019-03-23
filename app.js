@@ -6,6 +6,7 @@ let scores, roundScore, activePlayer, gamePlaying;
     const playerScore1 = document.getElementById('score-1');
 
     const diceDOM = document.querySelector('.dice');
+    const oneDice = document.querySelector('.oneDice');
 
     const currentPlayer0 = document.getElementById('current-0');
     const currentPlayer1 = document.getElementById('current-1');
@@ -49,7 +50,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
                 currentPlayer.textContent = roundScore;
             }
         }else {//enxt player  
-            alert('There is ONE dice');  
+            oneDice.style.display = 'block';
             nextPlayer();
         }
         dicePrevNumber = dice;
@@ -79,6 +80,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
         // playerScore1.textContent = '0';
         
     } else{
+        
         nextPlayer();
     }
     //next player
@@ -89,6 +91,10 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 
 function nextPlayer(){
     //next player
+    setTimeout(() => {
+        oneDice.style.display = 'none';
+    }, 1000);
+    
     currentPlayer0.textContent = '0';
     currentPlayer1.textContent = '0';
     
